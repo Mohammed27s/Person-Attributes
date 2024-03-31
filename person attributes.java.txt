@@ -1,0 +1,111 @@
+This is the the main source file 
+
+package PersonInformation;
+
+import java.util.Scanner;
+
+//This source file for reading all user inputs
+
+public class PersonAttributesRead {
+
+
+    public String personName;
+    public String personAge;
+    public String personJob;
+    public String personStatus;
+
+    public static void main(String[] args){
+
+        PersonAttributesRead person = new PersonAttributesRead();
+        person.personInput();
+
+    }
+
+
+     public void personInput(){
+
+        Scanner personInput = new Scanner(System.in);
+
+        System.out.println("Please fill your personal information "+"\n");
+
+        System.out.println("===========================================================");
+
+        System.out.println("What is your name ? "+"\n");
+        personName = personInput.nextLine();
+
+        System.out.println("What is your age ? "+"\n");
+        personAge = personInput.nextLine();
+
+        System.out.println("What is your job name ? "+"\n");
+        personJob = personInput.nextLine();
+
+        System.out.println("What is your status(Single or married) ? "+"\n");
+        personStatus = personInput.nextLine();
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+This is the source file for displaying all person information
+
+
+
+
+package PersonInformation;
+
+import PersonInformation.PersonAttributesRead;
+
+//This source file is for printing all the values of user here
+public class PersonAttributesShow {
+
+
+    public static void main(String[] args) {
+
+
+        PersonAttributesRead personInfo = new PersonAttributesRead();
+        personInfo.personInput();
+
+        String name = personInfo.personName;
+        String age = personInfo.personAge;
+        String job = personInfo.personJob;
+        String status = personInfo.personStatus;
+
+        PersonAttributesShow personShow = new PersonAttributesShow();
+        personShow.showInfo(name, age, job, status);
+
+
+
+    }
+
+       public void showInfo(String name, String age, String job, String status){
+
+           System.out.println("*** Your personal information ***"+"\n");
+
+           System.out.println("Your name: "+name+"\n");
+           System.out.println("Your age: "+age+"\n");
+           System.out.println("Your job: "+job+"\n");
+           System.out.println("Your Status: "+status+"\n");
+
+
+
+        }
+
+}
+
+
+
+
+
+
+
+
+
